@@ -1,0 +1,29 @@
+# Spring properties
+spring:
+  application:
+    name: get-list-customer    # This is the name for the remote configuration file
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      uri: mongodb://localhost/test
+  cloud:
+    config:
+      uri: http://localhost:8888  #where the config-service is running
+      fail-fast: true
+
+endpoints:
+  health:
+    enabled: yes
+  shutdown:
+    enabled: yes
+
+management:
+    context-path: /admin
+logging:
+  level:
+    org:
+      springframework:
+        web:
+          client: DEBUG
+
