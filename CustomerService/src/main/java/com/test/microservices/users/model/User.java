@@ -15,7 +15,7 @@ import javax.validation.constraints.NotNull;
  *
  */
 @Document(collection = "users")
-@JsonPropertyOrder({"userId", "name"})
+@JsonPropertyOrder({"userId", "name", "birthdate", "sex"})
 public class User implements Serializable{
 
 	private static final long serialVersionUID = -7788619177798333712L;
@@ -25,6 +25,11 @@ public class User implements Serializable{
     private String userId;
     @NotNull    
     private String name;
+	@NotNull
+	private String birthdate;
+	@NotNull
+	private String sex;
+
     
 	public String getUserId() {
 		return userId;
@@ -37,5 +42,21 @@ public class User implements Serializable{
 	}
 	public void setName(String name) {
 		this.name = name;
-	}   
+	}
+
+	public String getBirthdate() {
+		return birthdate;
+	}
+
+	public void setBirthdate(String birthdate) {
+		this.birthdate = birthdate;
+	}
+
+	public String getSex() {
+		return sex;
+	}
+
+	public void setSex(String sex) {
+		this.sex = sex;
+	}
 }
