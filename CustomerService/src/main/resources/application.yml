@@ -1,7 +1,7 @@
 # Spring properties
 spring:
   application:
-    name: get-list-customer    # This is the name for the remote configuration file
+    name: customers    # This is the name for the remote configuration file
   data:
     mongodb:
       host: localhost

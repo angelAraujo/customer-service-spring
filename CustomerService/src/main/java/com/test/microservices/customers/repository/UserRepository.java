@@ -1,6 +1,6 @@
-package com.test.microservices.users.repository;
+package com.test.microservices.customers.repository;
 
-import com.test.microservices.users.model.User;
+import com.test.microservices.customers.model.User;
 
 import java.util.List;
 import java.util.Optional;

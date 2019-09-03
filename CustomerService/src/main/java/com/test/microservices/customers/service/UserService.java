@@ -1,6 +1,6 @@
-package com.test.microservices.users.service;
+package com.test.microservices.customers.service;
 
-import com.test.microservices.users.model.User;
+import com.test.microservices.customers.model.User;
 import java.util.List;
 
 

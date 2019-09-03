@@ -1,4 +1,4 @@
-package com.test.microservices.users.config;
+package com.test.microservices.customers.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

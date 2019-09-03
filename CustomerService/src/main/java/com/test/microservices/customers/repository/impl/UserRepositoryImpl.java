@@ -1,7 +1,7 @@
-package com.test.microservices.users.repository.impl;
+package com.test.microservices.customers.repository.impl;
 
-import com.test.microservices.users.repository.UserRepository;
-import com.test.microservices.users.model.User;
+import com.test.microservices.customers.repository.UserRepository;
+import com.test.microservices.customers.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoOperations;
 import org.springframework.stereotype.Repository;

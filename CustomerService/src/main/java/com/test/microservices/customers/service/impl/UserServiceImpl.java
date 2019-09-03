@@ -1,10 +1,10 @@
-package com.test.microservices.users.service.impl;
+package com.test.microservices.customers.service.impl;
 
-import com.test.microservices.users.exception.UserNotFoundException;
+import com.test.microservices.customers.exception.UserNotFoundException;
 
-import com.test.microservices.users.model.User;
-import com.test.microservices.users.repository.UserRepository;
-import com.test.microservices.users.service.UserService;
+import com.test.microservices.customers.model.User;
+import com.test.microservices.customers.repository.UserRepository;
+import com.test.microservices.customers.service.UserService;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,4 +1,4 @@
-package com.test.microservices.users.config;
+package com.test.microservices.customers.config;
 
 import com.google.common.base.Predicate;
 import org.springframework.context.annotation.Bean;
@@ -45,8 +45,8 @@ public class SwaggerConfiguration {
      */
     private ApiInfo usersApiInfo() {
         return new ApiInfoBuilder()
-                .title("Service User")
-                .version("1.0")
+                .title("Service Customer")
+                .version("Exam GFT 1.0")
                 .license("Apache License Version 2.0")
                 .build();
     }
@@ -58,6 +58,6 @@ public class SwaggerConfiguration {
      * @return the predicate
      */
     private Predicate<String> userPaths() {
-        return regex("/user.*");
+        return regex("/customer.*");
     }
 }

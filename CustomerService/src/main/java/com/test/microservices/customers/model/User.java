@@ -1,5 +1,5 @@
 
-package com.test.microservices.users.model;
+package com.test.microservices.customers.model;
 
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import io.swagger.annotations.ApiModel;

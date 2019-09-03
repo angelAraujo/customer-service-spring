@@ -1,8 +1,8 @@
-package com.test.microservices.users.controller;
+package com.test.microservices.customers.controller;
 
-import com.test.microservices.users.exception.UserNotFoundException;
-import com.test.microservices.users.model.User;
-import com.test.microservices.users.service.UserService;
+import com.test.microservices.customers.exception.UserNotFoundException;
+import com.test.microservices.customers.model.User;
+import com.test.microservices.customers.service.UserService;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,7 +24,7 @@ import javax.validation.Valid;
  */
 
 @RestController
-@RequestMapping("users")
+@RequestMapping("customer")
 
 @Api(value = "Customer microservice", description = "This API has a CRUD for customer")
 public class UsersController {

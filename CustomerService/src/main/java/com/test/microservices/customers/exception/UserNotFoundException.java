@@ -1,4 +1,4 @@
-package com.test.microservices.users.exception;
+package com.test.microservices.customers.exception;
 
 import org.springframework.core.NestedRuntimeException;
 
