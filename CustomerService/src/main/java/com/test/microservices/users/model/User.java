@@ -2,6 +2,8 @@
 package com.test.microservices.users.model;
 
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -15,21 +17,21 @@ import javax.validation.constraints.NotNull;
  *
  */
 @Document(collection = "users")
-@JsonPropertyOrder({"userId", "name", "birthdate", "sex"})
+@JsonPropertyOrder({"userId", "name"})
+@ApiModel("Model User")
 public class User implements Serializable{
 
 	private static final long serialVersionUID = -7788619177798333712L;
 
     @Id
-    @NotNull  
-    private String userId;
-    @NotNull    
-    private String name;
-	@NotNull
-	private String birthdate;
-	@NotNull
-	private String sex;
+    @NotNull
 
+	@ApiModelProperty(value = "the user's id", required = true)
+    private String userId;
+    @NotNull
+
+	@ApiModelProperty(value = "the user's name", required = true)
+    private String name;
     
 	public String getUserId() {
 		return userId;
@@ -42,21 +44,5 @@ public class User implements Serializable{
 	}
 	public void setName(String name) {
 		this.name = name;
-	}
-
-	public String getBirthdate() {
-		return birthdate;
-	}
-
-	public void setBirthdate(String birthdate) {
-		this.birthdate = birthdate;
-	}
-
-	public String getSex() {
-		return sex;
-	}
-
-	public void setSex(String sex) {
-		this.sex = sex;
-	}
+	}   
 }
