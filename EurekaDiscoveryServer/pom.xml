@@ -14,8 +14,10 @@
         <version>2.1.3.RELEASE</version>
     </parent>
     <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.8</java.version>
         <spring-cloud.version>Greenwich.SR1</spring-cloud.version>
+        <docker.image.prefix>cutomersService</docker.image.prefix>
     </properties>
     <dependencies>
         <!-- Dependency for spring-cloud Netflix Eureka Server -->
@@ -67,6 +69,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
+
         </plugins>
     </build>
 
