@@ -1,15 +1,6 @@
 version: '3'
 services:
 
-  discovery:
-    image: customers/eureka-discovery-server-image
-    container_name: eureka-service-discovery
-    build:
-      context: ./EurekaDiscoveryServer
-      dockerfile: Dockerfile
-    ports:
-      - "8761:8761"
-
   main:
     image: customers/spring-cloud-configuration-server-image
     container_name: spring-cloud-configuration-server
@@ -18,10 +9,23 @@ services:
       dockerfile: Dockerfile
     ports:
       - "8888:8888"
+    expose:
+      - "8888"
+
+  discovery:
+    image: customers/eureka-discovery-server-image
+    container_name: eureka-service-discovery
+    build:
+      context: ./EurekaDiscoveryServer
+      dockerfile: Dockerfile
+    ports:
+      - "8761:8761"
+    expose:
+      - "8761"
     depends_on:
-      - discovery
-    links:
-      - discovery:discovery
+      - main
+    #links:
+    #  - discovery:discovery
 
   gateway:
     image: customers/zuul-service-gateway-image
@@ -31,10 +35,14 @@ services:
       dockerfile: Dockerfile
     ports:
       - "8080:8080"
+    expose:
+      - "8080"
     depends_on:
+      #- main
+      - main
       - discovery
-    links:
-      - discovery:discovery
+    #links:
+     # - discovery:discovery
 
   customers:
     image: customers/customer-service-image
@@ -45,9 +53,10 @@ services:
     ports:
       - "8091:8080"
     depends_on:
+      - main
       - discovery
-    links:
-      - discovery:discovery
-      - main:main
+      - gateway
+    #links:
+    #  - discovery:discovery
 
 
