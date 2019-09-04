@@ -30,9 +30,32 @@ public class User implements Serializable{
     private String userId;
     @NotNull
 
+
 	@ApiModelProperty(value = "the user's name", required = true)
     private String name;
-    
+
+	@ApiModelProperty(value = "the user's sex", required = true)
+	private String sex;
+
+	@ApiModelProperty(value = "the user's birthdate", required = true)
+	private String birthDate;
+
+	public String getSex() {
+		return sex;
+	}
+
+	public void setSex(String sex) {
+		this.sex = sex;
+	}
+
+	public String getBirthDate() {
+		return birthDate;
+	}
+
+	public void setBirthDate(String birthDate) {
+		this.birthDate = birthDate;
+	}
+
 	public String getUserId() {
 		return userId;
 	}

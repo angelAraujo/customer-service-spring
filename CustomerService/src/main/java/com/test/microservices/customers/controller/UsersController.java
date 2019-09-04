@@ -24,7 +24,7 @@ import javax.validation.Valid;
  */
 
 @RestController
-@RequestMapping("customer")
+@RequestMapping("customers")
 
 @Api(value = "Customer microservice", description = "This API has a CRUD for customer")
 public class UsersController {
