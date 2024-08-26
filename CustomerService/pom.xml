@@ -17,7 +17,7 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
 		<spring-cloud.version>Greenwich.SR1</spring-cloud.version>
-		<springfox.version>2.4.0</springfox.version>
+		<springfox.version>2.10.0</springfox.version>
 	</properties>
 	<dependencies>
 		<!-- Dependency to use a springboot web application capabilities -->
